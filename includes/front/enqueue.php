@@ -2,7 +2,8 @@
 
 function kp_enqueue_scripts() {
     $authURLs = json_encode([
-        'signup' => esc_url_raw(rest_url('kp/v1/signup'))
+        'signup' => esc_url_raw(rest_url('kp/v1/signup')),
+        'signin' => esc_url_raw(rest_url('kp/v1/signin'))
     ]);
 
     wp_add_inline_script(
