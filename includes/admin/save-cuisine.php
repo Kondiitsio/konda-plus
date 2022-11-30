@@ -5,7 +5,7 @@ function kp_save_cuisine_meta($termID) {
         return;
     }
 
-    add_term_meta(
+    update_term_meta(
         $termID,
         'more_info_url',
         sanitize_url($_POST['kp_more_info_url'])

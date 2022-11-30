@@ -40,7 +40,10 @@ function kp_recipe_post_type() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 20,
-		'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
+		'supports'           => array(
+			'title', 'editor', 'author',
+			'thumbnail', 'excerpt', 'custom-fields'
+		),
         'show_in_rest'       => true,
         'description'        => __('A custom post type for recipes', 'konda-plus'),
         'taxonomies'         => ['category', 'post_tag']
@@ -53,4 +56,20 @@ function kp_recipe_post_type() {
         'rewrite' => ['slug' => 'cuisine'],
         'show_in_rest' => true
     ]);
+
+	register_term_meta('cuisine', 'more_info_url', [
+		'type' => 'string',
+		'description' => __('A URL for more information on a cuisine', 'konda-plus'),
+		'single' => true,
+		'show_in_rest' => true,
+		'default' => '#'
+	]);
+
+	register_post_meta('recipe', 'recipe_rating', [
+		'type' => 'number',
+		'description' => __('The rating for a recipe', 'konda-plus'),
+		'single' => true,
+		'default' => 0,
+		'show_in_rest' => true
+	]);
 }
