@@ -1,6 +1,6 @@
 <?php
 
-function up_search_form_render_cb($atts) {
+function kp_search_form_render_cb($atts) {
     $bgColor = esc_attr($atts['bgColor']);
     $textColor = esc_attr($atts['textColor']);
     $styleAttr = "background-color:{$bgColor};color:{$textColor};";

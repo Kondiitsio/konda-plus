@@ -4,10 +4,10 @@ function kp_register_blocks() {
     $blocks = [
         [ 'name' => 'fancy-header' ],
         [ 'name' => 'search-form', 'options' => [
-            'render_callback' => 'up_search_form_render_cb'
+            'render_callback' => 'kp_search_form_render_cb'
         ]],
         [ 'name' => 'page-header', 'options' => [
-            'render_callback' => 'up_page_header_render_cb'
+            'render_callback' => 'kp_page_header_render_cb'
         ]],
         [ 'name' => 'header-tools', 'options' => [
             'render_callback' => 'kp_header_tools_render_cb'
