@@ -1,0 +1,49 @@
+{
+    "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+    "apiVersion": 2,
+    "name": "konda-plus/team-members-group",
+    "title": "Team Members Group",
+    "category": "text",
+    "description": "Adds a group for adding team members",
+    "textdomain": "konda-plus",
+    "attributes": {
+      "columns": {
+        "type": "number",
+        "default": 3
+      },
+      "imageShape": {
+        "type": "string",
+        "default": "hexagon"
+      }
+    },
+    "editorScript": "file:./index.js",
+    "style": "file:./index.css",
+    "providesContext": {
+      "konda-plus/image-shape": "imageShape"
+    },
+    "example": {
+      "attributes": {
+        "columns": 2
+      },
+      "innerBlocks": [
+        {
+          "name": "konda-plus/team-member",
+          "attributes": {
+            "name": "John Doe",
+            "title": "COE of Konda",
+            "bio": "This is a short description of the team member.",
+            "imgURL": "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
+          }
+        },
+        {
+          "name": "konda-plus/team-member",
+          "attributes": {
+            "name": "Jane Doe",
+            "title": "COE of Konda",
+            "bio": "This is a short description of the team member.",
+            "imgURL": "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
+          }
+        }
+      ] 
+    }
+  }
